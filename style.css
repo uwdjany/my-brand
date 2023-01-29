@@ -8,6 +8,7 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 :root {
   --primary: #00003b;
@@ -25,6 +26,7 @@ nav .nav-container {
   border-bottom: solid 2px black;
   position: fixed;
   width: 100%;
+  z-index: 10;
 }
 .nav-links .nav-list {
   display: flex;
@@ -43,16 +45,29 @@ nav .nav-container {
 .nav-list .list-items a.active {
   color: var(--secondary);
 }
-.nav-list .list-items a:hover::after,
-.nav-list .list-items a.active::after {
+.nav-list .list-items a:hover::after
+ {
   content: "";
-  width: 35%;
-  height: 2px;
+  width: 50%;
+  height: 3px;
   background-color: var(--secondary);
   position: absolute;
   bottom: -4px;
   left: 20px;
 }
+.active-li::after{
+   content: "";
+  width: 50%;
+  height: 3px;
+  background-color: var(--secondary);
+  position: absolute;
+  bottom: -4px;
+  left: 20px; 
+
+  
+
+}
+ 
 .nav-list .list-items {
   padding: 0 20px;
   position: relative;
@@ -123,16 +138,19 @@ nav .mobile-menu {
   background-color: var(--primary);
   width: 100%;
   height: 100vh; 
+ 
+
 }
 
-
-.home-content{
+ .home-content{
 color: var(--text-white);
 text-align: center;
-position: absolute;
+position: absolute; 
 width: 100%;
 height: 0px;
 top: 40%;
+
+
   
 
 
