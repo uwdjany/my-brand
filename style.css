@@ -1,0 +1,609 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #00003b;
+  --secondary: #f5d20b;
+  --third: #03037b;
+  --text-white: #fff;
+  --text-secondary: #C0C0C0;
+}
+nav .nav-container {
+  position: absolute;
+  background-color: var(--third);
+  display: flex;
+  padding: 25px 95px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.329);
+  border-bottom: solid 2px black;
+  position: fixed;
+  width: 100%;
+}
+.nav-links .nav-list {
+  display: flex;
+  font-size: 3vmin;
+  gap: 1rem;
+}
+
+.nav-list .list-items {
+  justify-content: center;
+}
+.nav-list .list-items a {
+  color: var(--text-white);
+  text-transform: capitalize;
+}
+.nav-list .list-items a:hover,
+.nav-list .list-items a.active {
+  color: var(--secondary);
+}
+.nav-list .list-items a:hover::after,
+.nav-list .list-items a.active::after {
+  content: "";
+  width: 35%;
+  height: 2px;
+  background-color: var(--secondary);
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+.nav-list .list-items {
+  padding: 0 20px;
+  position: relative;
+}
+
+nav .nav-links {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.logo .logo-item {
+  color: var(--text-white);
+  font-size: 4vmin;
+}
+
+.logo .log-name {
+  color: var(--secondary);
+}
+.list-btn {
+  display: none;
+}
+.btn .btn-login {
+  background: var(--third);
+  padding: 8px;
+  color: var(--text-white);
+  
+  font-size: 3vmin;
+  border: solid 2px var(--secondary);
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  margin-right: 5px;
+}
+.btn {
+  padding-top: 5px;
+}
+
+.btn .btn-signup {
+  background:#D9D9D9;
+  padding: 8px;
+  color: var(--primary);
+  font-size: 3vmin;
+  border-radius: 10px;
+  border: 2px solid #2FE013;
+  transition: 0.3s ease-in-out;
+  margin-left: 5px;
+}
+.btn .btn-signup:hover {
+  background-color: rgb(139, 223, 14);
+  color: var(--primary);
+}
+.btn .btn-login:hover {
+  background-color: var(--primary);
+  color: var(--text-white);
+  border: var(--text-secondary) solid 2px;
+}
+nav .mobile-menu {
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+
+/*========Home section===============*/
+
+#particles-js {
+ 
+  background-color: var(--primary);
+  width: 100%;
+  height: 100vh; 
+}
+
+
+.home-content{
+color: var(--text-white);
+text-align: center;
+position: absolute;
+width: 100%;
+height: 0px;
+top: 40%;
+  
+
+
+}
+.home-content h1{
+  font-size: 7vmin;
+  margin-bottom: 20px;
+  line-height: 29px;
+  padding-bottom: 10px;
+}
+.home-content h5{
+  font-size: 3vmin;
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+.home-content p {
+  font-size: 3vmin;
+  
+
+  /* padding: 0rem 36rem; */
+
+  color: #C0C0C0;
+  padding-bottom: 50px;
+}
+.home-content .btn-contact{
+  background: var(--third);
+  padding: 8px;
+  color: var(--text-white);
+  
+  font-size: 3vmin;
+  border: solid 2px var(--secondary);
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  margin-right: 10px;
+
+  
+  
+}
+.home-content .btn-resume{
+  background:#2FE013;
+  padding: 8px;
+  color: var(--text-white);
+  font-size: 3vmin;
+  border-radius: 10px;
+  border: 2px solid var(--text-white);
+  transition: 0.3s ease-in-out;
+  margin-left: 10px;
+
+}
+
+
+/* About section */
+
+.about-section{
+  background: var(--third);
+  width: 100%;
+
+  padding: 40px 90px;
+}
+
+.about-section img{
+  width: 90%;
+  border: solid 2px var(--third);
+  border-radius: 20px;
+
+
+}
+.about-section h2{
+  text-align: center;
+  color: var(--text-white);
+  font-size: 5vmin;
+}
+.title span{
+  color: var(--secondary);
+}
+.about-section p{
+  color: var(--text-secondary);
+  font-size: 3vmin;
+  padding-bottom: 30px;
+  width: 100%;
+  
+  
+}
+.line{
+  width: 150px;
+  height: 4px;
+  background: var(--secondary);
+  margin: 10px auto;
+  border-radius:5px;
+  margin-bottom: 30px;
+}
+.row{
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  padding-left: 20px;
+
+  /* padding: 80px 40px; */
+  border-radius: 20px;
+  
+
+}
+.col h3{
+  color: var(--secondary);
+  font-size: 4vmin;
+  padding-bottom: 20px;
+}
+
+.about-section .about-button{
+  width: 100%;
+}
+.about-section .btn-github{
+  background: var(--third);
+  padding: 8px;
+  color: var(--text-white);
+  
+  font-size: 3vmin;
+  border: solid 2px var(--secondary);
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  margin-right: 5px;
+ 
+
+}
+.about-section .btn-cv{
+  background: var(--third);
+  padding: 8px;
+  color: var(--text-white);
+  
+  font-size: 3vmin;
+  border: solid 2px var(--secondary);
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  margin-right: 5px;
+}
+
+/* Skills page */
+
+.all-skills{
+  background: var(--primary);
+}
+.skills-section .title{
+  text-align: center;
+  color: var(--text-white);
+  font-size: 4vmin;
+  
+}
+.skills-section .title span{
+  color: var(--secondary);
+}
+.skills-section .row-skill{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+   gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+ 
+}
+
+.icon-item .icon{
+  color: var(--secondary);
+  font-size: 10vmin;
+  text-align: center;
+ width: 100%;
+}
+.col-skill-one{
+background: var(--primary);
+width: 280px;
+height: 214px;
+background: #00003B;
+border: 4px solid #00003B;
+box-shadow: 0px 22px 40px #00008B;
+border-radius: 10px;
+padding: 10px;
+transition: transform .3s ease;
+}
+.col-skill-one:hover{
+  transform: scale(1.1);
+}
+
+.skills-section h3{
+  color: var(--text-white);
+  text-align: center;
+  width: 100%;
+  padding-bottom: 10px;
+  padding: 10px 0;
+}
+.skills-section p{
+  color:var(--text-secondary) ;
+  text-align: center;
+  width: 100%;
+  font-size: 2vmin;
+}
+
+
+
+/* my Experince style */
+
+.experience-section .row-exp{
+display: grid;
+grid-template-columns: auto auto;
+grid-column-gap: 20px;
+width: 100%;
+padding: 35px 23%
+}
+.col-exp .contents{
+  padding: 0px 30px;
+  border-left: 2px solid var(--secondary);
+}
+
+.experience-section .title{
+  color: var(--text-white);
+  text-align: center;
+  
+}
+.col-exp .contents .box{
+  position: relative;
+  padding: 20px;
+  border: 1px solid var(--third);
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: all 0.4s;
+  margin-bottom: 20px;
+}
+.col-exp .contents .box:hover{
+  box-shadow: 0px 3px 12px 0px var(--third);
+  border: 2px solid transparent;
+}
+.col-exp .contents .box::before{
+  content:'';
+  position:absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  right: calc(100% + 22px);
+  top: 0;
+  background-color: var(--secondary);
+  border: 2px solid var(--third);
+  
+}
+
+.experience-section h4{
+  color: var(--secondary);
+  font-size: 2vmin;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.experience-section h3{
+  color: var(--text-secondary);
+  font-size: 3vmin;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.experience-section p{
+  color: var(--text-white);
+  letter-spacing: 1px;
+  font-weight: 50;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+Mobile device */
+
+@media (max-width: 1170px) {
+
+  /* nav bar */
+  html {
+    font-size: 50%;
+  }
+
+  nav .nav-container {
+    padding: 2rem 2rem;
+  }
+  .nav-links .nav-list {
+    gap: 0;
+    font-size: 18px;
+  }
+  .logo .logo-item {
+    font-size: 20px;
+  }
+  .btn .btn-login {
+    padding: 6px;
+    font-size: 15px;
+  }
+  .btn .btn-signup {
+    padding: 6px;
+    font-size: 15px;
+  }
+
+  /* Home section */
+
+  .about-section p{
+    font-size: 2vmin;
+  }
+  .about-section img{
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1050px){
+  row{
+    width: 100%;
+  }
+.about-section img{
+  max-width: 90%;
+}
+.about-button .btn-github{
+ 
+  font-size: 1.5vmin;
+
+}
+.about-button .btn-cv{
+  font-size: 1.5vmin;
+
+}
+}
+
+@media (max-width: 1325px){
+  .btn .btn-login {
+    padding: 6px;
+    font-size: 12px;
+  }
+  .btn .btn-signup {
+    padding: 6px;
+    font-size: 12px;
+  }
+  .nav-links .nav-list {
+    gap: 0;
+    font-size: 16px;
+  }
+  .logo .logo-item{
+    font-size: 16px;
+  }
+  .about-section img{
+    max-width: 90%;
+  }
+  .about-section p{
+    font-size: 2vmin;
+  }
+  .row{
+    width: 100%;
+    
+  }
+
+}
+@media (max-width: 900px){
+  .skills-section .row-skill{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+}
+@media (max-width: 820px) {
+  nav .mobile-menu {
+    display: block;
+  }
+
+  .nav-links .nav-list {
+    position: fixed;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    height: 100vh;
+    font-size: 25px;
+    border-bottom-right-radius: 40%;
+    /* border-bottom-left-radius: 30%; */
+    background: var(--third);
+    right: 0;
+    left: 0;
+    top: -100%;
+  }
+  .nav-links .active1 {
+    top: 70px;
+    transition: 0.9s ease-in-out;
+  }
+  .btn {
+    display: none;
+  }
+
+  .list-btn {
+    display: block;
+    background-color: var(--third);
+    padding: 5px;
+    color: var(--text-white);
+    border: solid 2px var(--secondary);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: 0.3s ease-in-out;
+  }
+  li .list-btn {
+    color: var(--text-white);
+  }
+
+  /* Home section */
+  .home-content{
+    position: relative;
+  }
+  .home-content h1{
+    padding: 0px;
+  }
+  .home-content h5{
+    padding: 0px;
+  }
+ .home-content p{
+  padding-bottom: 20px;
+ }
+ .row{
+  flex-direction: column;
+  
+  width: 100%;
+  height: 50%;
+  
+ }
+ .col{
+  width: 100%;
+  padding: 20px 30px;
+  
+ }
+ .about-section img{
+  max-width: 300px;
+ 
+
+
+ }
+.about-section p{
+  width: 100%;
+
+}
+
+
+
+/* skill section */
+.skills-section .row-skill{
+display: grid;
+grid-template-columns: auto;
+width: 100%;
+}
+/* .skills-section p{
+  font-size: 3vmin;
+}
+.skills-section h3{
+  font-size: 3vmin;
+}
+.skills-section .title{
+  font-size: 5vmin;
+} */
+
+ /* my experince */
+ .experience-section .row-exp{
+  grid-template-columns: auto;
+ }
+}
+
+
