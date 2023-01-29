@@ -7,6 +7,36 @@ menuBtn.addEventListener("click",()=>{
 
 })
 
+
+// const activePage = window.location.pathname;
+// const navLinks = document.querySelector('.nav-list .list-items a').forEach(link =>{
+//     if(link.href.includes(`$activePage`)){
+//         link.classList.add('active');
+//     }
+// })
+
+
+const li=document.querySelectorAll(".list-items")
+const sec = document.querySelectorAll("section")
+
+function activeMenu(){
+    let len = sec.length;
+    while(--len && window.scrollY + 97 < sec[len].offsetTop){}
+    li.forEach(ltx => ltx.classList.remove("active-li"));
+    li[len].classList.add('active-li')
+}
+activeMenu()
+window.addEventListener("scroll",activeMenu);
+
+
+
+
+
+
+
+
+
+
 // const canvas = document.getElementById("canvas1");
 // const ctx = canvas.getContext("2d");
 // canvas.width = window.innerWidth;
