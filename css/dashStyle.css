@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --primary: #00003b;
+  --secondary: #f5d20b;
+  --third: #03037b;
+  --text-white: #fff;
+  --text-secondary: #c0c0c0;
+}
+

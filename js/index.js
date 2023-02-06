@@ -103,6 +103,19 @@ prevBtn.addEventListener('click', moveToPreviosSlide);
 
 
 
+ let button = document.querySelector(".about-button");
+ button.addEventListener("click" ,()=>{
+    const span = document.querySelector('a span');
+    button.style.visibility = 'visible';
+    setTimeout(()=>{
+        span.style.visibility="hidden";
+        button.style.transition='1s ease-in-out';
+        button.paddingRight ="0px"
+    },3000)
+ })
+
+
+
 
 
 
