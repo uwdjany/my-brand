@@ -106,13 +106,13 @@ nav .nav-links {
   color: var(--primary);
   font-size: 3vmin;
   border-radius: 10px;
-  border: 2px solid #2fe013;
+  border: 2px solid var(--primary);
   transition: 0.3s ease-in-out;
   margin-left: 5px;
 }
 .btn .btn-signup:hover {
-  background-color: rgb(139, 223, 14);
-  color: var(--primary);
+  background-color: transparent;
+  color: var(--text-white);
 }
 .btn .btn-login:hover {
   background-color: var(--primary);
@@ -173,14 +173,18 @@ nav .mobile-menu {
   margin-right: 10px;
 }
 .home-content .btn-resume {
-  background: #2fe013;
+  background:transparent;
   padding: 8px;
   color: var(--text-white);
   font-size: 3vmin;
   border-radius: 10px;
-  border: 2px solid var(--text-white);
+  border: 2px solid var(--secondary);
   transition: 0.3s ease-in-out;
   margin-left: 10px;
+}
+.btn-resume:hover{
+  background: var(--third);
+
 }
 
 /* About section */
@@ -430,7 +434,7 @@ nav .mobile-menu {
 .slide h2 {
   color: var(--text-white);
   font-size: 5vmin;
-  text-align: center;
+  /* text-align: center; */
   padding: 50px 0px;
 }
 .slide p {
@@ -727,10 +731,13 @@ Mobile device */
 
     padding: 0px 20px;
   }
+  .btn-slider{
+    width: 20%;
+  }
 }
 
 @media (max-width: 1050px) {
-  row {
+  .row {
     width: 100%;
   }
   .about-section img {
@@ -742,6 +749,31 @@ Mobile device */
   .about-button .btn-cv {
     font-size: 1.5vmin;
   }
+
+  /* my portofolio / work */
+  .btn-slider{
+    width: 55%;
+    padding: 5px;
+  }
+  .slide h2{
+    font-size: 3vmin;
+    padding: 30px 0px;
+  }
+  .slide img{
+    width: 100%;
+    height: 50vh;
+    
+    
+   
+  }
+  .slide p{
+    font-size: 2vmin;
+  }
+  .content-row{
+    width: 100%;
+    padding: 50px 20px;
+  }
+  
 }
 
 @media (max-width: 1325px) {
@@ -771,11 +803,20 @@ Mobile device */
   }
 
   /* portofolio */
+  .content-row{
+    width: 100%;
+    
+  }
 
   .slide img {
-    max-width: 800px;
+  width: 100%;
+ 
 
-    padding: 0px 20px;
+    padding: 0px 25px;
+  }
+  .title-content{
+    width: 100%;
+    padding: 15px 25px;
   }
 }
 @media (max-width: 900px) {
@@ -789,7 +830,7 @@ Mobile device */
     font-size: 2vmin;
   }
   .btn-slider {
-    width: 70%;
+    width: 20%;
   }
   .slide img {
     width: 100%;
@@ -914,10 +955,10 @@ Mobile device */
   .slide .paragraph {
     width: 100%;
   }
-  .content-row{
-    width: 100%;
+  /* .content-row{
+    width: 50%;
     padding: 50px 0px;
-  }
+  } */
 
   /* contact page */
 
@@ -935,9 +976,42 @@ Mobile device */
 
 }
 
+@media(max-width:823px) {
+  .content-row{
+    width: 100%;
+ 
+
+  }
+  .slide img{
+    width: 100%;
+    height: 100%;
+
+  }
+  .btn-slider{
+    width: 40%;
+  
+  }
+  
+}
+
 @media(max-width:450px){
   .content-box{
     width: 70%;
+  }
+  .btn-slider{
+    width: 50%;
+  }
+  .content-row{
+    width: 100%;
+    
+    
+    
+  }
+  @media(max-width:484px){
+    .btn-slider{
+      width: 100%;
+    }
+
   }
 }
 @media(max-width:318px){
@@ -946,6 +1020,29 @@ Mobile device */
   }
   .box{
     width: 100%;
+  }
+
+  /* my potfolio */
+  .slide img{
+    width: 100%;
+    padding: 0px 25px;
+  }
+  .content-row{
+    width: 150%;
+  right: 40px;
+   
+    
+    
+    
+  }
+  @media(max-width:280px){
+    .content-row{
+      width: 180%;
+    }
+    .slide img{
+      width: 100%;
+    }
+    
   }
  
 }
