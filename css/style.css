@@ -609,7 +609,7 @@ padding-bottom: 20px;
   
 
   background: #00003b;
-  border: 1px solid #000000;
+  /* border: 1px solid #000000; */
   box-shadow: inset 0px 22px 44px rgba(0, 0, 0, 0.5);
 }
 .content-media-1 {

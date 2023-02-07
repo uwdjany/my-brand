@@ -141,7 +141,7 @@ body{
     color: var(--secondary);
 }
 
-input[type="submit"]
+a[type="submit"]
 {
    border: none;
    outline:none;
