@@ -100,9 +100,9 @@ body{
 }
 .inputBox input:valid ~ span,
 .inputBox input:focus ~ span{
-    color: var(--secondary);
+    color: var(--text-white);
     transform: translateX(-10px) translateY(-34px);
-    font-size: 0.75em;
+    font-size: 1em;
 }
 .inputBox i{
     position: absolute;
@@ -141,7 +141,7 @@ body{
     color: var(--secondary);
 }
 
-input[type="submit"]
+a[type="submit"]
 {
    border: none;
    outline:none;

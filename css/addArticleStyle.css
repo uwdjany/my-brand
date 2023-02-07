@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --primary: #00003b;
+  --secondary: #f5d20b;
+  --third: #03037b;
+  --text-white: #fff;
+  --text-secondary: #c0c0c0;
+}
+body {
+  background: var(--text-white);
+}
+.go-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-form h2 {
+  font-size: 4vmin;
+  color: var(--text-white);
+  text-align: center;
+}
+
+.add-form {
+  background: var(--primary);
+  width: 50%;
+  padding: 40px 90px;
+  border-radius: 10px;
+
+  margin: 30px 0px;
+  box-shadow: 0px 22px 44px black;
+}
+.box .inputBox {
+  width: 100%;
+  padding: 10px 0px;
+}
+.inputBox input {
+  padding: 20px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  background: var(--third);
+}
+
+.inputBox textarea {
+  padding: 20px;
+  width: 100%;
+  border-radius: 20px;
+  height: 30vh;
+  border: none;
+  background: var(--third);
+  padding-bottom: 20px;
+}
+.submit-btn button {
+  padding: 8px 15px;
+  font-size: 3vmin;
+  border-radius: 10px;
+  background: var(--third);
+  color: var(--text-white);
+  transition: 0.3s ease-in-out;
+  letter-spacing: 2px;
+  border: solid 1px var(--secondary);
+}
+.submit-btn button:hover {
+  background: var(--text-secondary);
+  color: var(--primary);
+}
+.upload span {
+  font-size: 3vmin;
+  font-weight: bold;
+  color: var(--text-white);
+}
+.upload input {
+  width: 100%;
+  padding: 40px 10px;
+  color: var(--text-white);
+}
+input::placeholder{
+    font-size: 3vmin;
+}
+textarea::placeholder{
+    font-size: 3vmin;
+}
