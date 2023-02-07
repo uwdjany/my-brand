@@ -1,9 +1,17 @@
 let menuBtn = document.querySelector("#menuBar");
- let menuLink = document.querySelector(".nav-list");
+let menuLink = document.querySelector(".nav-list");
+//  let section = document.querySelector("section");
+ let links = document.querySelector(".list-items")
+
 
 menuBtn.addEventListener("click",()=>{
     menuBtn.classList.toggle("fa-times");
-    menuLink.classList.toggle("active1")
+     menuLink.classList.toggle("active1");
+    
+
+})
+links.addEventListener("click",()=>{
+    menuLink.classList.remove("removeStyle")
 
 })
 
