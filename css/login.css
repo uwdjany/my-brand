@@ -141,7 +141,7 @@ body{
     color: var(--secondary);
 }
 
-a[type="submit"]
+button[type="submit"]
 {
    border: none;
    outline:none;

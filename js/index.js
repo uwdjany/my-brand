@@ -1,7 +1,7 @@
 let menuBtn = document.querySelector("#menuBar");
 let menuLink = document.querySelector(".nav-list");
 //  let section = document.querySelector("section");
- let links = document.querySelector(".list-items")
+ 
 
 
 menuBtn.addEventListener("click",()=>{
@@ -10,10 +10,10 @@ menuBtn.addEventListener("click",()=>{
     
 
 })
-links.addEventListener("click",()=>{
-    menuLink.classList.remove("removeStyle")
+// links.addEventListener("click",()=>{
+//     menuLink.classList.remove("removeStyle")
 
-})
+// })
 
 
 // const activePage = window.location.pathname;
