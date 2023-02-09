@@ -20,34 +20,47 @@
                 <label>Back to home</label>
             </a>
             </div>
-<div class="box">
-    <div class="form">
+           
+           <div class="box">
+
+
+         
+    <div class="formsigup">
         <h2>Sign up</h2>
+        <form role="form" onsubmit="signUp(event)" autocomplete="off">
         <div class="inputBox">
-            <input type="text" required="required">
-            <span>Names</span>
+            <input type="text" name="fname" id="fname" required>
+            <span>First Name</span>
             <i></i>
         </div>
         <div class="inputBox">
-            <input type="text" required="required">
+            <input type="text" name="lname" id="lname" required>
+            <span>Last Name</span>
+            <i></i>
+        </div>
+        <div class="inputBox">
+            <input type="text" name="email" id="email" required>
             <span>E-mail</span>
             <i></i>
         </div>
         <div class="inputBox">
-            <input type="text" required="required">
+            <input type="text" name="pwd" id="pwd" required>
             <span>Password</span>
             <i></i>
         </div>
         <div class="links">
-            <a href="#"></a>
+        <a href=""></a>
             <a href="login.html">Sign In</a>
         </div>
-       
-        <a href="dashboard.html" type="submit" class="btn">Sign Up</a>
+       <button type="submit">sign Up</button>
+        <!-- <a href="dashboard.html" type="submit" class="btn">Sign Up</a> -->
+    </form>
     </div>
 
 </div>
+
 </section>
     
+<script type="text/javascript" src="./js/authentication.js"></script>
 </body>
 </html>

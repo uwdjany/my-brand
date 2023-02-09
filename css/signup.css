@@ -17,6 +17,9 @@
   --text-white: #fff;
   --text-secondary: #c0c0c0;
 }
+body{
+    background: var(--primary);
+}
 
 
 body{
@@ -34,13 +37,13 @@ body{
     color: var(--text-secondary);
     font-size: 3vmin;
     width: 100%;
-    padding: 30px 25px;
+    padding: 8px 25px;
   }
 
 .box{
     position: relative;
     width: 390px;
-    height: 460px;
+    height: 550px;
     background: var(--primary);
     background: #00003b;
     border: 4px solid #00003b;
@@ -56,13 +59,13 @@ body{
 }
 
 
-.form{
+.formsigup{
 
     padding: 50px 40px;
     display: flex;
     flex-direction: column;
 }
-.form h2{
+.formsigup h2{
     color: var(--text-secondary);
     font-weight: 500;
     text-align: center;
@@ -141,7 +144,7 @@ body{
     color: var(--secondary);
 }
 
-a[type="submit"]
+button[type="submit"]
 {
    border: none;
    outline:none;

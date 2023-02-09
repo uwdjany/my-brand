@@ -9,6 +9,7 @@
   list-style: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
+ 
 }
 :root {
   --primary: #00003b;
@@ -18,7 +19,15 @@
   --text-secondary: #c0c0c0;
 }
 body{
-    background: var(--text-secondary);
+    background: var(--text-secondary);    
+    
+    
+}
+.dashboard-content{
+   
+    width: 80%;
+    padding: 10px 50px;
+
 }
 
 
@@ -26,7 +35,8 @@ header .container{
     position: fixed;
      background: var(--primary); 
     width: 100%;
-    padding: 10px 80px;
+    padding: 10px 74px;
+    z-index: 9;
   
 
 }
@@ -75,6 +85,7 @@ header .container{
 }
 .sider{
     display: flex;
+   
 }
 nav{
     position: relative;
@@ -86,6 +97,7 @@ nav{
     overflow: hidden;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
     position: fixed;
+    z-index:9;
 
 }
 ul{
@@ -119,9 +131,9 @@ nav .icon{
 }
 .link-items{
     position: relative;
-
     margin-left: 7px;
     font-size: 20px;
+
 }
 nav a:hover{
     background:var(--third);
@@ -135,14 +147,15 @@ nav a:hover{
    
     position: relative;
     padding: 20px;
-    width: 70%;
+    width: 100%;
     top: 100px;
-    left: 30%;
+    left: 20%;
+    
 
 }
 .content-main{
     display: flex;
-    gap:20px;
+    gap:26px;
     padding-bottom: 40px;
 }
 .box{
@@ -181,10 +194,11 @@ nav a:hover{
 
 .comment-form{
     background: var(--text-white);
-    width: 79%;
+    width: 100%;
     padding: 20px 50px;
     border: 1px solid var(--primary);
     box-shadow: 0px 22px 44px rgba(0, 0, 0, 0.25);
+   overflow-y: scroll;
 }
 .title-comment{
     width: 100%;
@@ -193,7 +207,7 @@ nav a:hover{
 }
 .content-comment{
   width: 100%;
-  padding: 20px 40px;
+  padding: 20px 0px;
   
 }
 
@@ -205,5 +219,78 @@ nav a:hover{
 .user-email{
     font-size: 2vmin;
     padding-bottom: 10px;
+
+}
+
+/* add article */
+.add-artcles{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    top: 100px;
+    left: 20%;
+    
+
+}
+table{
+   
+    /* width: 100%; */
+    background: var(--text-white);
+    border: 2px solid var(--primary);
+    /* padding: 20px 40px; */
+    border-collapse: collapse;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    
+
+}
+table thead tr{
+    background: var(--primary);
+    color: var(--text-white);
+    text-align: left;
+}
+table th , table td{
+    padding: 12px 15px;
+}
+
+table tbody tr{
+    border-bottom: 2px solid var(--text-secondary);
+}
+
+
+thead{
+    font-size: 2vmin;
+    font-weight: bold;
+}
+ table tbody tr:nth-of-type(even){
+    background: #f3f3f3;
+ }
+ table tbody tr:last-of-type{
+    border-bottom: 2px solid var(--primary);
+ }
+ table tbody tr:hover{
+   
+    cursor: pointer;
+   
+ }
+table td {
+    padding: 8px 15px;
+}
+ .btn-td{
+    display: flex;
+    gap: 10px;
+
+    
+}
+.delete-btn{
+    background: red;
+    padding: 5px;
+    color: var(--text-white);
+}
+.edit-btn{
+    background: var(--third);
+    padding: 5px;
+    color: var(--text-white);
 
 }
