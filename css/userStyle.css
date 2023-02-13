@@ -20,6 +20,10 @@
 body{
     background: var(--primary);
 }
+.go-back{
+    padding: 30px 20px;
+    font-size: 20px;
+}
 h2{
     color: var(--text-white);
     font-size: 40px;

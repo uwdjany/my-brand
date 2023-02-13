@@ -1,20 +1,20 @@
 let menuBtn = document.querySelector("#menuBar");
 let menuLink = document.querySelector(".nav-list");
 //  let section = document.querySelector("section");
- 
 
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("fa-times");
+  menuLink.classList.toggle("active1");
+});
 
-menuBtn.addEventListener("click",()=>{
-    menuBtn.classList.toggle("fa-times");
-     menuLink.classList.toggle("active1");
-    
-
-})
+toggle = () => {
+  menuBtn.classList.toggle("fa-times");
+  menuLink.classList.toggle("active1");
+};
 // links.addEventListener("click",()=>{
 //     menuLink.classList.remove("removeStyle")
 
 // })
-
 
 // const activePage = window.location.pathname;
 // const navLinks = document.querySelector('.nav-list .list-items a').forEach(link =>{
@@ -23,32 +23,31 @@ menuBtn.addEventListener("click",()=>{
 //     }
 // })
 
+const li = document.querySelectorAll(".list-items");
+const sec = document.querySelectorAll("section");
 
-const li=document.querySelectorAll(".list-items")
-const sec = document.querySelectorAll("section")
-
-function activeMenu(){
-    let len = sec.length;
-    while(--len && window.scrollY + 97 < sec[len].offsetTop){}
-    li.forEach(ltx => ltx.classList.remove("active-li"));
-    li[len].classList.add('active-li')
+function activeMenu() {
+  let len = sec.length;
+  while (--len && window.scrollY + 97 < sec[len].offsetTop) {}
+  li.forEach((ltx) => ltx.classList.remove("active-li"));
+  li[len].classList.add("active-li");
 }
-activeMenu()
-window.addEventListener("scroll",activeMenu);
+activeMenu();
+window.addEventListener("scroll", activeMenu);
 
-const slideRow = document.querySelector('.content-row');
-const slide = document.querySelector('.col-slider');
-const nextBtn = document.querySelector('#next-btn');
-const prevBtn = document.querySelector('#prev-btn');
+const slideRow = document.querySelector(".content-row");
+const slide = document.querySelector(".col-slider");
+const nextBtn = document.querySelector("#next-btn");
+const prevBtn = document.querySelector("#prev-btn");
 const interval = 3000;
 let sliderId;
 
-let slides = document.querySelectorAll('.slide')
+let slides = document.querySelectorAll(".slide");
 let index = 1;
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length - 1].cloneNode(true);
-firstClone.id ='first-clone';
-lastClone.id ='last-clone';
+firstClone.id = "first-clone";
+lastClone.id = "last-clone";
 
 slide.append(firstClone);
 slide.append(lastClone);
@@ -56,78 +55,59 @@ slide.append(lastClone);
 const slideWidth = slides[index].clientWidth;
 slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
-const startSlide =()=>{
-  sliderId = setInterval(()=>{
-        moveToNextSlide();
-    },interval)
+const startSlide = () => {
+  sliderId = setInterval(() => {
+    moveToNextSlide();
+  }, interval);
 };
 
-const getSlides =()=>  document.querySelectorAll('.slide')
+const getSlides = () => document.querySelectorAll(".slide");
 
-
-
-slide.addEventListener('transitionend',()=>{
-    slides = getSlides();
-    if(slides[index].id === firstClone.id){
-        slide.style.transition ='none';
-        index = 1;
-        slide.style.transform = `translateX(${-slideWidth * index}px)`;
-        
-         
-    }
-
-    if(slides[index].id === lastClone.id){
-        slide.style.transition ='none';
-        index = slides.length - 2;
-        slide.style.transform = `translateX(${-slideWidth * index}px)`;
-        
-         
-    }
-
-})
-const moveToNextSlide=()=>{
-    slides = getSlides();
-    if(index >= slides.length -1) return;
-    index++;
+slide.addEventListener("transitionend", () => {
+  slides = getSlides();
+  if (slides[index].id === firstClone.id) {
+    slide.style.transition = "none";
+    index = 1;
     slide.style.transform = `translateX(${-slideWidth * index}px)`;
-slide.style.transition='.7s';
+  }
 
+  if (slides[index].id === lastClone.id) {
+    slide.style.transition = "none";
+    index = slides.length - 2;
+    slide.style.transform = `translateX(${-slideWidth * index}px)`;
+  }
+});
+const moveToNextSlide = () => {
+  slides = getSlides();
+  if (index >= slides.length - 1) return;
+  index++;
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
+  slide.style.transition = ".7s";
 };
-const moveToPreviosSlide=()=>{
-    // if(index <= 0) return;
-    index--;
-    slide.style.transform = `translateX(${-slideWidth * index}px)`;
-slide.style.transition='.7s';
+const moveToPreviosSlide = () => {
+  // if(index <= 0) return;
+  index--;
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
+  slide.style.transition = ".7s";
+};
+slideRow.addEventListener("mouseenter", () => {
+  clearInterval(sliderId);
+});
+slideRow.addEventListener("mouseleave", startSlide);
+nextBtn.addEventListener("click", moveToNextSlide);
+prevBtn.addEventListener("click", moveToPreviosSlide);
+startSlide();
 
-}
-slideRow.addEventListener('mouseenter', ()=>{
-    clearInterval(sliderId);
-})
-slideRow.addEventListener('mouseleave',startSlide)
-nextBtn.addEventListener('click',moveToNextSlide);
-prevBtn.addEventListener('click', moveToPreviosSlide);
- startSlide();
-
-
-
-
- let button = document.querySelector(".about-button");
- button.addEventListener("click" ,()=>{
-    const span = document.querySelector('a span');
-    button.style.visibility = 'visible';
-    setTimeout(()=>{
-        span.style.visibility="hidden";
-        button.style.transition='1s ease-in-out';
-        button.paddingRight ="0px"
-    },3000)
- })
-
-
-
-
-
-
-
+let button = document.querySelector(".about-button");
+button.addEventListener("click", () => {
+  const span = document.querySelector("a span");
+  button.style.visibility = "visible";
+  setTimeout(() => {
+    span.style.visibility = "hidden";
+    button.style.transition = "1s ease-in-out";
+    button.paddingRight = "0px";
+  }, 3000);
+});
 
 // const canvas = document.getElementById("canvas1");
 // const ctx = canvas.getContext("2d");
@@ -188,7 +168,7 @@ prevBtn.addEventListener('click', moveToPreviosSlide);
 //       if (mouse.y > this.y && this.y > this.size * 10) {
 //         this.y -= 10;
 //       }
-//     } 
+//     }
 //     this.x += this.directionX;
 //     this.y += this.directionY;
 //     this.draw();
