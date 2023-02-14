@@ -3,10 +3,7 @@ const signUp = (e) => {
   let lname = document.getElementById("lname").value;
   let email = document.getElementById("email").value;
   let pwd = document.getElementById("pwd").value;
- 
-  const role = "visitor";
-
-
+  const role = "user";
   let formData = JSON.parse(localStorage.getItem("formData")) || [];
   let exist =
     formData.length &&
@@ -26,13 +23,13 @@ const signUp = (e) => {
   }
   e.preventDefault();
 };
-let tbody = document.querySelector('tbody');
+let tbody = document.querySelector("tbody");
 function displayData() {
-  tbody.innerHTML = '';
+  tbody.innerHTML = "";
   const users = JSON.parse(localStorage.getItem("formData"));
-  users.forEach((user,i) => {
+  users.forEach((user, i) => {
     //console.log(user);
-   tbody.innerHTML +=`<tr>
+    tbody.innerHTML += `<tr>
    <td>${++i}</td>
    <td>${user.fname}</td>
    <td>${user.lname}</td>
@@ -43,23 +40,19 @@ function displayData() {
    <button  style="background:red ; color:white; padding:6px 9px; border-radius:8px;" type="button"  onclick="deleteUser(${--i});">Delete</button>
    </td>
    </tr>
-   `
+   `;
   });
 }
-
-deleteUser = i =>{
-  if(confirm('Are you sure You want to delete this User')){
+deleteUser = (i) => {
+  if (confirm("Are you sure You want to delete this User")) {
     data.splice(++i, 1);
-    localStorage.setItem('formData',JSON.stringify(data))
-    displayData()
+    localStorage.setItem("formData", JSON.stringify(data));
+    displayData();
   }
-}
-
-
-
+};
 function signIn(e) {
-  let email = document.getElementById("email").value,
-    pwd = document.getElementById("pwd").value;
+  let email = document.getElementById("email").value;
+  let pwd = document.getElementById("pwd").value;
   let formData = JSON.parse(localStorage.getItem("formData")) || [];
   let exist =
     formData.length &&

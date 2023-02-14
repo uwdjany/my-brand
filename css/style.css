@@ -859,8 +859,6 @@ Mobile device */
     left:0;
     top: -100%;
   }
- 
-  
   .nav-list .list-items{
     text-align: center;
     padding: 10px 0px;
@@ -870,45 +868,28 @@ Mobile device */
     top: 70px;
     transition: 0.9s ease-in-out;
   } 
- 
   .active-li::after {
-  
     width: 13%;
     bottom: -1px;
     left: 42%;
   }
   .nav-list .list-items a:hover::after {
     display: none;
-   
-   
   }
   .btn {
     display: none;
   }
-
   .list-btn {
     display: block;
-    /* background-color: var(--third); */
-    /* padding: 5px; */
     color: var(--text-white);
-    /* border: solid 2px var(--secondary); */
-    /* border-radius: 10px; */
     font-weight: bold;
     font-size: 22px;
-    /* text-align: center; */
     padding-left: 15px;
-    /* padding-right: 15px; */
-    /* transition: 0.3s ease-in-out; */
     text-align: center;
-
   }
   .a-btn{
     color: var(--text-white);
-    
-
   }
- 
-
   /* Home section */
   .home-content {
     position: relative;
@@ -945,15 +926,6 @@ Mobile device */
     grid-template-columns: auto;
     width: 100%;
   }
-  /* .skills-section p{
-  font-size: 3vmin;
-}
-.skills-section h3{
-  font-size: 3vmin;
-}
-.skills-section .title{
-  font-size: 5vmin;
-} */
 
   /* my experince */
   .experience-section .row-exp {
@@ -983,10 +955,6 @@ Mobile device */
   .slide .paragraph {
     width: 100%;
   }
-  /* .content-row{
-    width: 50%;
-    padding: 50px 0px;
-  } */
 
   /* contact page */
 

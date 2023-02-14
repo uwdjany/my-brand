@@ -93,9 +93,9 @@ body {
   padding: 40px 10px;
   color: var(--text-white);
 }
-input::placeholder{
-    font-size: 3vmin;
+input::placeholder {
+  font-size: 3vmin;
 }
-textarea::placeholder{
-    font-size: 3vmin;
+textarea::placeholder {
+  font-size: 3vmin;
 }
