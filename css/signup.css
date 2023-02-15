@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
 *,
 *::before,
 *::after {
@@ -20,7 +19,6 @@
 body {
   background: var(--primary);
 }
-
 body {
   background: var(--text-white);
 }
@@ -139,9 +137,7 @@ button[type="submit"] {
 input[type="submit"]:active {
   opacity: 0.9;
 }
-
 /* mobile device */
-
 @media (max-width: 375px) {
   .box {
     width: 300px;

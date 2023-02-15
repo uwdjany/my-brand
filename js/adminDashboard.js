@@ -5,3 +5,8 @@ mobileNav.addEventListener("click", ()=>{
     list.classList.toggle("active");
 
 })
+toggle = () => {
+    mobileNav.classList.toggle("fa-times");
+    list.classList.toggle("active");
+
+  };

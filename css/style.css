@@ -483,9 +483,7 @@ nav .mobile-menu {
 #prev-btn:focus {
   outline: none;
 }
-
 /* contact me page */
-
 .contact-section {
   background: var(--primary);
   width: 100%;
@@ -536,7 +534,6 @@ padding-bottom: 20px;
 }
 .box .inputBox {
   padding: 10px 0px;
-  
 }
 .inputBox input {
   padding: 15px;
@@ -547,7 +544,6 @@ padding-bottom: 20px;
   outline: none;
   border: none;
 }
-
 .box .inputArea {
   padding: 15px;
   width: 80%;
@@ -844,7 +840,6 @@ Mobile device */
   nav .mobile-menu {
     display: block;
   }
-
   .nav-links .nav-list{
     position: fixed;
     flex-direction: column;
