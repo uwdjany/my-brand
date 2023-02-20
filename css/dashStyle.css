@@ -541,3 +541,30 @@ table td {
     font-size: 5px;
   }
 }
+@media only screen and (max-width: 820px) and (min-width: 280px)
+{
+  .user-name{
+    font-size: 18px;
+  }
+  .user-email{
+    font-size: 15px;
+  }
+  .title-comment{
+    font-size: 20px;
+  }
+  .comment-form{
+    padding: 10px 15px;
+  }
+
+.name{
+  padding: 8px 10px;
+}
+.faces{
+  font-size: 22px;
+  left: 16px;
+}
+ .container .wrap{
+  top: 10px;
+ 
+ }
+}

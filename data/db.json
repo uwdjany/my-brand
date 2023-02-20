@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "title": "New react course toturial",
+      "author": "Lydie",
+      "body": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dicta eos sint magnam dolorum te Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dicta eos sint magnam dolorum taccusantium alias vitae, ipsum quae rem debitis in optio voluptatum at officia quia ipsa. Eveniet!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dicta eos sint magnam dolorum tempora",
+      "date": "19/Feb/2023",
+      "img": "/image/blog1.jpeg",
+      "likes": 20,
+      "comment": 10
+    }
+  ]
+}

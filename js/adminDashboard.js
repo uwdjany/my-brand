@@ -10,3 +10,7 @@ toggle = () => {
     list.classList.toggle("active");
 
   };
+
+  //Add blog javascript
+
+  

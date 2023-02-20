@@ -3,7 +3,7 @@ const signUp = (e) => {
   let lname = document.getElementById("lname").value;
   let email = document.getElementById("email").value;
   let pwd = document.getElementById("pwd").value;
-  const role = "user";
+  const role = "visitor";
   let formData = JSON.parse(localStorage.getItem("formData")) || [];
   let exist =
     formData.length &&
@@ -37,16 +37,20 @@ function displayData() {
    <td>${user.pwd}</td>
    <td>${user.role}</td>
    <td>
-   <button  style="background:red ; color:white; padding:6px 9px; border-radius:8px;" type="button"  onclick="deleteUser(${--i});">Delete</button>
+   <button  style="background:red ; color:white; padding:6px 9px; border-radius:8px;" type="button"  onclick="deleteUser('${
+     user.email
+   }');">Delete</button>
    </td>
    </tr>
    `;
   });
 }
-deleteUser = (i) => {
+deleteUser = (email) => {
+  console.log(email);
   if (confirm("Are you sure You want to delete this User")) {
-    data.splice(++i, 1);
-    localStorage.setItem("formData", JSON.stringify(data));
+    const posts = JSON.parse(localStorage.getItem("formData")) || [];
+    const newPost = posts.filter((item) => item.email != email);
+    localStorage.setItem("formData", JSON.stringify(newPost));
     displayData();
   }
 };
