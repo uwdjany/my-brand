@@ -9,6 +9,51 @@
       "img": "/image/blog1.jpeg",
       "likes": 20,
       "comment": 10
+    },
+    {
+      "id": 4,
+      "title": "How to become a good programmer",
+      "author": "Djanati",
+      "body": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dicta eos sint magnam dolorum te Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dicta eos sint magnam dolorum taccusantium alias vitae, ipsum quae rem debitis in optio voluptatum at officia quia ipsa. Eveniet!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dicta eos sint magnam dolorum tempora",
+      "date": "19/Feb/2023",
+      "img": "/image/blog1.jpeg",
+      "likes": 20,
+      "comment": 10
+    }
+  ],
+  "query": [
+    {
+      "id": 1,
+      "names": "Nsengiyumva sulef",
+      "email": "n-sulef250@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque"
+    },
+    {
+      "id": 2,
+      "names": "Muhawe Lydie",
+      "email": "lydie@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque"
+    },
+    {
+      "id": 3,
+      "names": "Renzaho tee",
+      "email": "tee@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga maxime atque"
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "names": "uwase",
+      "email": "mupelagie20@gmail.com",
+      "message": "how are you",
+      "id": 7
     }
   ]
 }

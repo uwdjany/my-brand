@@ -339,22 +339,27 @@
             </div>
             <div class="content-box">
                 <h1>Get In touch</h1>
+               
                 <div class="box">
-                    <div class="inputBox">
-                        <input type="text" placeholder="Your Name">
+                    <form>
+                        <div class="inputBox">
+                        <input type="text" name="names" placeholder="Your Name">
+                        </div>
+                        <div class="inputBox">
+                   
+                        <input type="text" name="email" placeholder="Your E-mail">
                     </div>
                     <div class="inputBox">
-                        <input type="text" placeholder="Your E-mail">
+                        <textarea placeholder="Your Message" name="message" class="inputArea"></textarea>
                     </div>
-                    <div class="inputBox">
-                        <textarea placeholder="Your Message" class="inputArea"></textarea>
-                    </div>
-
+                    
                     <div class="submit-btn">
                         <button>Send</button>
 
                     </div>
+                </form>
                 </div>
+           
             </div>
         </main>
         <main class="form-socials">
@@ -406,8 +411,10 @@
             </div>
         </div>
     </section>
+    <script src="js/sendMessage.js"></script>
     <script defer src="./js/index.js"></script>
     <script src="./js/particles.js"></script>
     <script src="./js/app.js"></script>
+    
 </body>
 </html>

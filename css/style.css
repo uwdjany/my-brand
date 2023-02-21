@@ -535,7 +535,7 @@ padding-bottom: 20px;
 .box .inputBox {
   padding: 10px 0px;
 }
-.inputBox input {
+.box input {
   padding: 15px;
   width: 80%;
   font-size: 2vmin;
@@ -543,6 +543,7 @@ padding-bottom: 20px;
   background: var(--third);
   outline: none;
   border: none;
+  color: var(--text-white);
 }
 .box .inputArea {
   padding: 15px;
@@ -553,6 +554,7 @@ padding-bottom: 20px;
   outline: none;
   height: 30vh;
   border: none;
+  color: var(--text-white);
 }
 .submit-btn button {
   padding: 10px;
