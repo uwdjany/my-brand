@@ -93,9 +93,25 @@ body {
   padding: 40px 10px;
   color: var(--text-white);
 }
-input::placeholder{
-    font-size: 3vmin;
+input::placeholder {
+  font-size: 3vmin;
 }
-textarea::placeholder{
-    font-size: 3vmin;
+textarea::placeholder {
+  font-size: 3vmin;
+}
+
+@media only screen and (max-width: 820px) and (min-width: 280px) {
+  .go-back {
+  }
+
+  .add-form {
+    width: 100%;
+  }
+  .box .inputBox {
+    width: 100%;
+  }
+  .inputBox input {
+    width: 100%;
+    padding: 10px 19px;
+  }
 }

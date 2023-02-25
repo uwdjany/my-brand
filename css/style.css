@@ -483,9 +483,7 @@ nav .mobile-menu {
 #prev-btn:focus {
   outline: none;
 }
-
 /* contact me page */
-
 .contact-section {
   background: var(--primary);
   width: 100%;
@@ -536,9 +534,8 @@ padding-bottom: 20px;
 }
 .box .inputBox {
   padding: 10px 0px;
-  
 }
-.inputBox input {
+.box input {
   padding: 15px;
   width: 80%;
   font-size: 2vmin;
@@ -546,8 +543,8 @@ padding-bottom: 20px;
   background: var(--third);
   outline: none;
   border: none;
+  color: var(--text-white);
 }
-
 .box .inputArea {
   padding: 15px;
   width: 80%;
@@ -557,6 +554,7 @@ padding-bottom: 20px;
   outline: none;
   height: 30vh;
   border: none;
+  color: var(--text-white);
 }
 .submit-btn button {
   padding: 10px;
@@ -844,7 +842,6 @@ Mobile device */
   nav .mobile-menu {
     display: block;
   }
-
   .nav-links .nav-list{
     position: fixed;
     flex-direction: column;
@@ -859,8 +856,6 @@ Mobile device */
     left:0;
     top: -100%;
   }
- 
-  
   .nav-list .list-items{
     text-align: center;
     padding: 10px 0px;
@@ -870,45 +865,28 @@ Mobile device */
     top: 70px;
     transition: 0.9s ease-in-out;
   } 
- 
   .active-li::after {
-  
     width: 13%;
     bottom: -1px;
     left: 42%;
   }
   .nav-list .list-items a:hover::after {
     display: none;
-   
-   
   }
   .btn {
     display: none;
   }
-
   .list-btn {
     display: block;
-    /* background-color: var(--third); */
-    /* padding: 5px; */
     color: var(--text-white);
-    /* border: solid 2px var(--secondary); */
-    /* border-radius: 10px; */
     font-weight: bold;
     font-size: 22px;
-    /* text-align: center; */
     padding-left: 15px;
-    /* padding-right: 15px; */
-    /* transition: 0.3s ease-in-out; */
     text-align: center;
-
   }
   .a-btn{
     color: var(--text-white);
-    
-
   }
- 
-
   /* Home section */
   .home-content {
     position: relative;
@@ -945,15 +923,6 @@ Mobile device */
     grid-template-columns: auto;
     width: 100%;
   }
-  /* .skills-section p{
-  font-size: 3vmin;
-}
-.skills-section h3{
-  font-size: 3vmin;
-}
-.skills-section .title{
-  font-size: 5vmin;
-} */
 
   /* my experince */
   .experience-section .row-exp {
@@ -983,10 +952,6 @@ Mobile device */
   .slide .paragraph {
     width: 100%;
   }
-  /* .content-row{
-    width: 50%;
-    padding: 50px 0px;
-  } */
 
   /* contact page */
 

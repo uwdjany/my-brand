@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.quilljs.com/1.3.6/quill.core.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js"></script>
+    <link rel="stylesheet" href="./css/allblog.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <title>Add Blog</title>
+  </head>
+  <body>
+    <div class="go-back">
+      <a href="dashboard.html">
+        <i class="fa-sharp fa-solid fa-arrow-left icon"></i>
+
+        <label>Back</label>
+      </a>
+    </div>
+    <div class="container">
+      <div class="add-form">
+        <h2>Create a new blog</h2>
+        <form>
+          <input type="text" name="title" required placeholder="Title" />
+          <input type="text" name="author" required placeholder="Author" />
+          <input type="date" name="date" required placeholder="Date" />
+          <div id="text-editor" class="text-editor" name="body"></div>
+          <!-- <input type="hidden" name="quill-html" id="quill-html"> -->
+
+          <div class="upload">
+            <!-- <span>Upload image</span><br /><br /> -->
+            <input type="file" name="img" id="img" />
+          </div>
+          <div class="submit-btn">
+            <button>Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="js/post_quill_editor.js"></script>
+    <script src="js/createBlog.js"></script>
+  </body>
+</html>

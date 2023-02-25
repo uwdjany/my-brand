@@ -29,7 +29,7 @@ body {
 }
 .row {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   width: 100%;
   gap: 20px;
   justify-content: center;
@@ -57,7 +57,7 @@ body {
 .col {
   background: var(--primary);
   width: 600px;
-  height: 500px;
+  height: 550px;
   background: #00003b;
   border: 4px solid #00003b;
   box-shadow: 0px 22px 40px #00008b;
@@ -75,38 +75,35 @@ body {
   width: 100%;
   padding: 30px 25px;
 }
-.blog-img{
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-    
+.blog-img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
 }
-.col h2{
-    color: var(--text-white);
-    padding: 10px 0px;
+.col h2 {
+  color: var(--text-white);
+  padding: 10px 0px;
 }
-.col p{
-    color: var(--text-secondary);
-   letter-spacing: 1px;
-   font-size: 2vmin;
-   padding-bottom: 40px;
+.col p {
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+  font-size: 2vmin;
+  padding-bottom: 40px;
 }
-.btn{
- background: var(--third);
+.btn {
+  background: var(--third);
   padding: 8px;
   color: var(--text-white);
-  
- 
+
   font-size: 3vmin;
   border: solid 2px var(--secondary);
   border-radius: 10px;
   transition: 0.3s ease-in-out;
-  
 }
-img{
-  transition: transform .3s ease;
+img {
+  transition: transform 0.3s ease;
 }
-img:hover{
+img:hover {
   transform: scale(1.1);
 }
 /* Mobile device */
@@ -170,7 +167,7 @@ img:hover{
     grid-template-columns: auto;
   }
 
-.col{
+  .col {
     max-width: 250px;
   }
 }

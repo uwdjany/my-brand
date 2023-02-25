@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --primary: #00003b;
+  --secondary: #f5d20b;
+  --third: #03037b;
+  --text-white: #fff;
+  --text-secondary: #c0c0c0;
+}
+body{
+  
+  background: var(--primary);
+}
+.go-back{
+  padding: 30px 20px;
+}
+.container{
+
+  color:var(--text-white);
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 10px;
+
+}
+.post h2{
+  color: var(--primary);
+}
+.post p{
+  color: rgb(35, 33, 33);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+header a{
+    background: var(--third);
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--text-white);
+    transition: 0.4s;
+    font-size: 20px;
+}
+header h1{
+    margin: 0;
+    letter-spacing: 1px;
+    color: var(--secondary);
+}
+.post {
+    padding: 16px;
+    background:gray;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  .post h2 {
+    margin: 0;
+    color: black;
+  }
+  .post p {
+    margin-top: 0;
+    padding-bottom: 10px;
+  }
+  .post a {
+    color: var(--text-white);
+    background: var(--third);
+    padding: 6px;
+    border-radius: 6px;
+  }
+  button{
+    width: 10%;
+    border: none;
+   
+  }
+   .edit{
+    padding: 4px;
+    background: var(--third);
+    color: var(--text-white);
+   
+  }
+  .delete{
+    padding: 4px;
+    background: red;
+    color: var(--text-white);
+   
+
+  }
+  .getOne p{
+    padding-bottom: 20px;
+  }
+  form {
+    max-width: 500px;
+  }
+  input {
+    display: block;
+    margin: 16px 0;
+    padding: 15px 10px;
+    width: 100%;
+    border: 1px solid var(--text-white);
+    font-family: 'Roboto';
+    border-radius: 10px;
+    color: var(--text-white);
+    font-size: 15px;
+  
+    background: transparent;
+  }
+  .text-editor {
+    min-height:200px;
+   
+    border-radius: 10px;
+   
+  }
+  .submit-btn button{
+    width: 20%;
+    padding: 6px;
+    background: var(--third);
+    color: var(--text-white);
+  }
+  .add-form h2{
+    color: var(--text-white);
+    font-size: 30px;
+  }
+  ::placeholder{
+    color: var(--text-secondary);
+    font-size: 15px;
+  }
+  .viewOne{
+    padding: 20px 30px;
+    
+  }
+  .getOne h1{
+    color:var(--primary);
+    font-size: 40px;
+  }
+  .getOne p{
+    color:black;
+  }
+  .viewOne{
+    background: var(--text-white);
+    max-width: 900px;
+    margin: 100px auto;
+  }
