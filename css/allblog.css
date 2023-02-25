@@ -57,7 +57,7 @@ header h1{
 }
 .post {
     padding: 16px;
-    background: var(--text-secondary);
+    background:gray;
     border-radius: 10px;
     margin: 20px 0;
   }
@@ -132,4 +132,19 @@ header h1{
     color: var(--text-secondary);
     font-size: 15px;
   }
-  
+  .viewOne{
+    padding: 20px 30px;
+    
+  }
+  .getOne h1{
+    color:var(--primary);
+    font-size: 40px;
+  }
+  .getOne p{
+    color:black;
+  }
+  .viewOne{
+    background: var(--text-white);
+    max-width: 900px;
+    margin: 100px auto;
+  }

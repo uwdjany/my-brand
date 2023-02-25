@@ -8,6 +8,7 @@
     <title>My Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="./css/dashStyle.css">
+ 
 
 </head>
 
@@ -43,7 +44,7 @@
                 </a>
                 </li>
                 <li>
-                    <a href="allblog.html"  onclick="toggle()">
+                    <a href="#create"  onclick="toggle()">
                         <i class="fa-sharp fa-solid fa-square-plus icon"></i><span class="link-items">All Blog</span>
                     </a>
                 </li>
@@ -53,7 +54,7 @@
                     </a>
                 </li> -->
                 <li>
-                    <a href="query.html"  onclick="toggle()">
+                    <a href="#create-query"  onclick="toggle()">
                         <i class="fa-solid fa-clipboard-question icon"></i><span class="link-items">Query</span>
                     </a>
                 </li>
@@ -156,186 +157,42 @@
 
         </section>
 
-        <!-- <section class="add-artcles" id="create">
-            <div class="container-article">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Title</th>
-                            <th>Author</th>
-                            <th>Date</th>
-                            <th>Description</th>
-                            <th>Action</th>
+        <section class="add-artcles" id="create">
+        
+        
+            <div class="content-blogs">
 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>01</td>
-                            <td class="title-td">
-
-                                How to become a good programmer
-                            </td>
-                            <td>Djanati</td>
-                            <td>8/Feb/2023</td>
-                            <td>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione incidunt doloremque
-                                    facere adipi
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga
-                                    maxime atque
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga
-                                    maximesci iusto error, consequatur fugit earum id q</p>
-                            </td>
-                            <td>
-                                <div class="btn-td">
-                                    <div>
-                                        <a href="editArticle.html" class="edit-btn">Edit</a>
-                                    </div>
-                                    <div>
-                                        <a href="" class="delete-btn">Delete</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>02</td>
-                            <td>How to become a good programmer</td>
-                            <td>Djanati</td>
-                            <td>8/Feb/2023</td>
-                            <td>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione incidunt doloremque
-                                    facere
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga
-                                    maxime atque
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga
-                                    maximeadipisci iusto error, consequatur fugit earum id q</p>
-                            </td>
-                            <td>
-                                <div class="btn-td">
-                                    <div>
-                                        <a href="editArticle.html" class="edit-btn">Edit</a>
-
-                                    </div>
-                                    <div>
-                                        <a href="" class="delete-btn">Delete</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>03</td>
-                            <td>How to become a good programmer</td>
-                            <td>Djanati</td>
-                            <td>23/Jan/2023</td>
-                            <td>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione incidunt doloremque
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga
-                                    maxime atque
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga
-                                    maxime facere adipisci iusto error, consequatur fugit earum id q</p>
-                            </td>
-                            <td>
-                                <div class="btn-td">
-                                    <div>
-                                        <a href="editArticle.html" class="edit-btn">Edit</a>
-
-                                    </div>
-                                    <div>
-                                        <a href="" class="delete-btn">Delete</a>
-                                    </div>
-                                </div>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>04</td>
-                            <td>How to become a good programmer</td>
-                            <td>Djanati</td>
-                            <td>23/Jan/2023</td>
-                            <td>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione incidunt doloremque
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga
-                                    maxime atque
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga
-                                    maxime facere adipisci iusto error, consequatur fugit earum id q</p>
-                            </td>
-                            <td>
-                                <div class="btn-td">
-                                    <div>
-                                        <a href="editArticle.html" class="edit-btn">Edit</a>
-
-                                    </div>
-                                    <div>
-                                        <a href="" class="delete-btn">Delete</a>
-                                    </div>
-
-
-
-                                </div>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>05</td>
-                            <td>How to become a good programmer</td>
-                            <td>Djanati</td>
-                            <td>23/Jan/2023</td>
-                            <td>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione incidunt doloremque
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga
-                                    maxime atque
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga
-                                    maxime facere adipisci iusto error, consequatur fugit earum id q</p>
-                            </td>
-                            <td>
-                                <div class="btn-td">
-                                    <div>
-                                        <a href="editArticle.html" class="edit-btn">Edit</a>
-                                    </div>
-                                    <div>
-                                        <a href="" class="delete-btn">Delete</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>06</td>
-                            <td>How to become a good programmer</td>
-                            <td>Djanati</td>
-                            <td>23/Jan/2023</td>
-                            <td>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione incidunt doloremque
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga
-                                    maxime atque
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo neque iste fuga
-                                    maxime facere adipisci iusto error, consequatur fugit earum id q</p>
-                            </td>
-                            <td>
-                                <div class="btn-td">
-                                    <div>
-                                        <a href="editArticle.html" class="edit-btn">Edit</a>
-
-                                    </div>
-                                    <div>
-                                        <a href="" class="delete-btn">Delete</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-
+            <div class="container-blogs">
+                <div class="header-blog">
+                  <h1>All Blog</h1>
+                  <a href="createBlog.html">Add a new blog</a>
+                </div>
+          
+                <div class="blogs"></div>
+              </div>
             </div>
+        </section>
+        <section class="query-section" id="create-query">
+        <div class="container-message">
+            <div class="container-query">
+                
+                <h1>Message.....</h1>
+                <div class="query-page">
+                   
+               
+                 
+                </div>
+              </div>
+            </div>
+        </section>
 
-        </section> -->
         </div>
     </main>
 
 </div>
+<script src="js/query.js"></script>
+<script src="/js/renderpost.js"></script>
+
 <script src="./js/adminDashboard.js"></script>
 
 

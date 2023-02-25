@@ -52,6 +52,7 @@ body {
 .iconsDiv .icon {
   color: var(--secondary);
   font-size: 2vmin;
+  cursor: pointer;
 }
 .iconsDiv p {
   color: var(--text-white);
@@ -132,7 +133,9 @@ body {
   text-align: center;
   font-size: 4vmin;
 }
-
+.activeLiked{
+  color: var(--text-white);
+}
 /* Mobile device */
 @media (max-width: 1744px) {
   .content-comment {

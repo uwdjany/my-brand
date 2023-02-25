@@ -12,10 +12,3 @@ let toolbaroptions = [
   [{ font: [] }],
   ["code-block"],
 ];
-let quill = new Quill("#text-editor", {
-  modules: {
-    toolbar: toolbaroptions,
-  },
-  theme: "snow",
-});
-

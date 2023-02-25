@@ -15,6 +15,7 @@ const postBlogs = async () => {
           <p>
          ${posted.body.slice(0, 150)}
           </p>
+          
           <a href="blogContent.html?id=${posted.id}" class="btn">Read More</a>
         </div>
         

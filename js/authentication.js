@@ -73,7 +73,9 @@ function signIn(e) {
     )[0];
     if (user.role.toLowerCase() == "admin") {
       location.href = "/dashboard.html";
-    } else {
+    } 
+    
+    else {
       location.href = "/blog.html";
     }
   }

@@ -10,10 +10,10 @@ const renderPost = async ()=>{
         blog +=`
         <div class="post">
         <h2>${posts.title}</h2>
-        <p style= "color:#03037b;font-weight:bold;">Done:${posts.date}</p>
+        <p style= "color:#f5d20b;font-weight:bold;">Done:${posts.date}</p>
         <p><small>${posts.likes}</small> Likes</p>
         <p><small>${posts.comment}</small> Comment</p>
-        <p>${posts.body.slice(0,250)}</p>
+        <p>${posts.body.slice(0,150)}</p>
         <a href="viewOneblog.html?id=${posts.id}">Read more</a>
         </div>`
     });
@@ -25,6 +25,9 @@ const renderPost = async ()=>{
 
 
 addEventListener('DOMContentLoaded' ,()=>renderPost())
+
+
+
 
 
 
