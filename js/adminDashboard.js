@@ -13,4 +13,8 @@ toggle = () => {
 
   //Add blog javascript
 
-  
+  function logoutDash(){
+    let user = localStorage.getItem("formData")
+    localStorage.removeItem("loggedIn",user)
+    location.href='/index.html'
+  }

@@ -9,7 +9,7 @@ const getQuery = async () => {
   res.forEach((data) => {
     queryContent += `
     <div class="content">
-    <div class="content-comment">
+    <div class="content-comments">
     <h5 class="user-name">${data.names}</h5>
     <h5 class="user-email">${data.email}</h5>
     <p>${data.message}</p>

@@ -1,9 +1,11 @@
+
+
 const signUp = (e) => {
   let fname = document.getElementById("fname").value;
   let lname = document.getElementById("lname").value;
   let email = document.getElementById("email").value;
   let pwd = document.getElementById("pwd").value;
-  const role = "visitor";
+  const role = "admin";
   let formData = JSON.parse(localStorage.getItem("formData")) || [];
   let exist =
     formData.length &&
@@ -54,6 +56,12 @@ deleteUser = (email) => {
     displayData();
   }
 };
+
+
+
+
+
+
 function signIn(e) {
   let email = document.getElementById("email").value;
   let pwd = document.getElementById("pwd").value;
@@ -64,6 +72,8 @@ function signIn(e) {
       (data) =>
         data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd
     );
+
+
   console.log(exist);
   if (!exist) {
     alert("Invalid email or password");
@@ -71,13 +81,33 @@ function signIn(e) {
     const user = JSON.parse(localStorage.getItem("formData")).filter(
       (item) => item.email == email && item.pwd == pwd
     )[0];
+    localStorage.setItem("loggedIn", user.email);
     if (user.role.toLowerCase() == "admin") {
       location.href = "/dashboard.html";
-    } 
+      
+    }
     
+   
     else {
-      location.href = "/blog.html";
+      location.href = "/index.html";
     }
   }
   e.preventDefault();
+}
+let userAccount = document.getElementById("user-account");
+let btnNav = document.getElementById("btn-home")
+
+function logout(){
+  let user = localStorage.getItem("formData")
+  if(!(localStorage.removeItem("loggedIn",user))){
+    userAccount.style.display="none"
+  }
+  else{
+    location.href='/index.html';
+  }
+
+  
+ 
+
+  
 }

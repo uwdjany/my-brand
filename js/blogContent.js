@@ -3,8 +3,6 @@ const id = new URLSearchParams(window.location.search).get("id");
 //const containerLike = document.querySelector("#container-active");
 //const likeBtn = document.querySelector("#likedBtn");
 
-
-
 const container = document.querySelector("main");
 const getOneById = async () => {
   const url = await fetch(" http://localhost:3000/posts/" + id);
@@ -17,9 +15,12 @@ const getOneById = async () => {
     <div class="iconsDiv">
       <p>
         <i class="fa-solid fa-calendar-days icon" ></i> ${res.date}
-        <button style="background:transparent"><i class="fa-solid fa-comment icon" id="liked"></i> ${res.comment} +</button>
-        <button id="likedBtn"><i class="fa-solid fa-thumbs-up icon"></i></button>
-        <span id="likeCount">${res.likes}</span>
+        <button style=""><i class="fa-solid fa-comment icon" id="liked"></i> ${res.comment} +</button>
+       
+        <button id="likedBtn" onclick="like()"><i class="fa-solid fa-thumbs-up icon"></i></button>
+        
+       
+        <span id="likeCount">${res.likes.length}</span>
         
       </p>
     </div>
@@ -38,7 +39,5 @@ const getOneById = async () => {
 
   container.innerHTML = temp;
 };
-
-
 
 window.addEventListener("DOMContentLoaded", () => getOneById());
