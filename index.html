@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,9 @@
     <title>PERSONAL PORTFOLIO</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
+
 <body>
     <nav>
         <div class="nav-container">
@@ -45,17 +48,44 @@
                     <li class="list-btn">
                         <a href="sigup.html" class="a-btn">Sign Up</a>
                     </li>
+                    <li>
+
+                        <div class="btn-name" id="user-account">
+                            <span class="name" id="name-user">
+                                <script>
+                                    const userLoggedIn = localStorage.getItem("loggedIn");
+                                    document.write(userLoggedIn)
+
+                                </script>
+
+
+
+
+                            </span>
+
+
+                            <button onclick="logout()" class="btn_users">
+                                LogOut
+                            </button>
+                        </div>
+                    </li>
                 </ul>
 
+
             </div>
-            <div class="btn">
+            <div class="btn" id="btn-home">
+
                 <a href="login.html" class="btn-login">Sign In</a>
                 <a href="sigup.html" class="btn-signup">Sign Up</a>
+
+
             </div>
             <div class="mobile-menu">
 
                 <i id="menuBar" class="fa-solid fa-bars"></i>
             </div>
+
+
         </div>
     </nav>
 
@@ -339,27 +369,27 @@
             </div>
             <div class="content-box">
                 <h1>Get In touch</h1>
-               
+
                 <div class="box">
                     <form>
                         <div class="inputBox">
-                        <input type="text" name="names" placeholder="Your Name">
+                            <input type="text" name="names" placeholder="Your Name">
                         </div>
                         <div class="inputBox">
-                   
-                        <input type="text" name="email" placeholder="Your E-mail">
-                    </div>
-                    <div class="inputBox">
-                        <textarea placeholder="Your Message" name="message" class="inputArea"></textarea>
-                    </div>
-                    
-                    <div class="submit-btn">
-                        <button>Send</button>
 
-                    </div>
-                </form>
+                            <input type="text" name="email" placeholder="Your E-mail">
+                        </div>
+                        <div class="inputBox">
+                            <textarea placeholder="Your Message" name="message" class="inputArea"></textarea>
+                        </div>
+
+                        <div class="submit-btn">
+                            <button>Send</button>
+
+                        </div>
+                    </form>
                 </div>
-           
+
             </div>
         </main>
         <main class="form-socials">
@@ -411,10 +441,12 @@
             </div>
         </div>
     </section>
+    <script src="js/authentication.js"></script>
     <script src="js/sendMessage.js"></script>
     <script defer src="./js/index.js"></script>
     <script src="./js/particles.js"></script>
     <script src="./js/app.js"></script>
-    
+
 </body>
+
 </html>

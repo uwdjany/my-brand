@@ -102,12 +102,15 @@ body {
   font-size: 2vmin;
   border-radius: 50px;
   background: var(--third);
+  color: white;
   outline: none;
   border: none;
 }
 
 .box .inputArea {
   padding: 15px;
+   color: white;
+
   width: 80%;
   font-size: 2vmin;
   border-radius: 30px;
@@ -118,6 +121,7 @@ body {
 }
 .submit-btn button {
   padding: 10px;
+  cursor: pointer;
   width: 40%;
   font-size: 3vmin;
   border-radius: 50px;

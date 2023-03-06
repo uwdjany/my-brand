@@ -683,6 +683,30 @@ padding-bottom: 20px;
   padding: 10px 0px;
 }
 
+.btn-name{
+  display: flex;
+}
+
+.btn_users {
+  font-size: 16px;
+  padding: 8px;
+  background: var(--third);
+  color: var(--text-white);
+  border: solid 1px var(--secondary);
+}
+.name {
+  padding: 10px 20px;
+  font-size: 2vmin;
+  color: var(--text-white);
+  font-weight: bold;
+}
+.faces {
+  position: absolute;
+  top: 10px;
+  left: 17px;
+  font-size: 4vmin;
+}
+
 /* 
 Mobile device */
 

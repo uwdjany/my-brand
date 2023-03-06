@@ -21,19 +21,21 @@
           <h2>ADD COMMENTS</h2>
 
           <div class="box">
+            <form>
             <div class="inputBox">
-              <input type="text" placeholder="Your Name" />
+              <input type="text" placeholder="Your Name" name="name" required/>
             </div>
             <div class="inputBox">
-              <input type="text" placeholder="Your E-mail" />
+              <input type="email" placeholder="Your E-mail" name="email" required />
             </div>
             <div class="inputBox">
-              <textarea placeholder="Your comment" class="inputArea"></textarea>
+              <textarea placeholder="Your comment" name="comment" class="inputArea" required></textarea>
             </div>
 
             <div class="submit-btn">
-              <button>Add comment</button>
+              <button type="submit">Add comment</button>
             </div>
+          </form>
           </div>
         </div>
 
@@ -42,7 +44,9 @@
         </div>
       </div>
     </section>
-<script src="js/liked.js"></script>
+ <script src="js/comment.js"></script>
+  
+       <script src="js/liked.js"></script>
     <script src="js/blogContent.js"></script>
   </body>
 </html>
