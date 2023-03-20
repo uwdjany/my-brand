@@ -89,25 +89,28 @@ function signIn(e) {
     
    
     else {
+
       location.href = "/index.html";
+    
     }
   }
   e.preventDefault();
 }
 let userAccount = document.getElementById("user-account");
 let btnNav = document.getElementById("btn-home")
+ if(userAccount){
+  btnNav.style.display="none"
+}
 
 function logout(){
   let user = localStorage.getItem("formData")
   if(!(localStorage.removeItem("loggedIn",user))){
+    btnNav.style.display="block"
     userAccount.style.display="none"
   }
   else{
-    location.href='/index.html';
+    userAccount.style.display="none"
+     location.href='/index.html';
   }
 
-  
- 
-
-  
 }

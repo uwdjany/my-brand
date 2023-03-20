@@ -1,36 +1,32 @@
 const container = document.querySelector(".blogs");
-const renderPost = async ()=>{
-    const url = (' http://localhost:3000/posts');
-    const res = await fetch(url);
-    const post = await  res.json();
-    //console.log(post)
+const renderPost = async () => {
+  // const url = (' http://localhost:3000/posts');
+  // const res = await fetch(url);
+  // const post = await  res.json();
+  //console.log(post)
 
-    let blog =''
-    post.forEach(posts => {
-        blog +=`
+  var requestOptions = {
+    method: "GET",
+    redirect: "follow",
+  };
+
+  fetch("http://localhost:9090/api/blog/", requestOptions)
+    .then((response) => response.json())
+    .then((result) => {
+      let blog = "";
+      result.data.forEach((posts) => {
+        blog += `
         <div class="post">
         <h2>${posts.title}</h2>
         <p style= "color:#f5d20b;font-weight:bold;">Done:${posts.date}</p>
         <p><small>${posts.likes.length}</small> Likes</p>
-        <p><small>${posts.comment}</small> Comment</p>
-        <p>${posts.body.slice(0,150)}</p>
-        <a href="viewOneblog.html?id=${posts.id}">Read more</a>
-        </div>`
+        <p><small>${posts.comments.lingth}</small> Comment</p>
+        <p>${posts.content}</p>
+        <a href="viewOneblog.html?id=${posts._id}">Read more</a>
+        </div>`;
+      });
+      container.innerHTML = blog;
     });
-    container.innerHTML = blog
+};
 
-}
-
-
-
-
-addEventListener('DOMContentLoaded' ,()=>renderPost())
-
-
-
-
-
-
-
-
-
+addEventListener("DOMContentLoaded", () => renderPost());

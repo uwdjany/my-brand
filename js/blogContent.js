@@ -1,11 +1,11 @@
-const id = new URLSearchParams(window.location.search).get("id");
+const idOne = new URLSearchParams(window.location.search).get("id");
 //const iconLike = document.querySelector('#icon-like');
 //const containerLike = document.querySelector("#container-active");
 //const likeBtn = document.querySelector("#likedBtn");
 
 const container = document.querySelector("main");
 const getOneById = async () => {
-  const url = await fetch(" http://localhost:3000/posts/" + id);
+  const url = await fetch(" http://localhost:3000/posts/" + idOne);
   const res = await url.json();
   const temp = `
     <div class="img-content" id="container-active">

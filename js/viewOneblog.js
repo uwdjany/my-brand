@@ -4,12 +4,12 @@ const deleteBtn = document.querySelector(".delete");
 const editBtn = document.querySelector(".edit");
 
 const viewOne = async () => {
-  const view = await fetch("http://localhost:3000/posts/" + id);
+  const view = await fetch("http://localhost:9090/api/blog/" + id);
   const post = await view.json();
-  //console.log(post)
+  console.log(post);
   const viewOneBlog = `
-<h1>${post.title}</h1>
-<p>${post.body}</p>
+<h1>${post.data.title}</h1>
+<p>${post.data.content}</p>
 `;
   content.innerHTML = viewOneBlog;
 };
