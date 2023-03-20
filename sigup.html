@@ -16,20 +16,25 @@
       <div class="go-back">
         <a href="index.html">
           <i class="fa-sharp fa-solid fa-arrow-left icon"></i>
-          <label>Back to home</label>
-        </a>+++
+          <label>Back to home</label> </a
+        >+++
       </div>
       <div class="box">
         <div class="formsigup">
           <h2>Sign up</h2>
-          <form role="form" onsubmit="signUp(event)" autocomplete="off">
+          <form
+            role="form"
+            name="createAccount"
+            id="createAccount"
+            onsubmit="signUpForm(event);"
+          >
             <div class="inputBox">
-              <input type="text" name="fname" id="fname" required />
+              <input type="text" name="firstName" id="firstName" required />
               <span>First Name</span>
               <i></i>
             </div>
             <div class="inputBox">
-              <input type="text" name="lname" id="lname" required />
+              <input type="text" name="lastName" id="lastName" required />
               <span>Last Name</span>
               <i></i>
             </div>
@@ -39,7 +44,7 @@
               <i></i>
             </div>
             <div class="inputBox">
-              <input type="password" name="pwd" id="pwd" required />
+              <input type="password" name="password" id="password" required />
               <span>Password</span>
               <i></i>
             </div>
@@ -52,7 +57,43 @@
         </div>
       </div>
     </section>
-    <script></script>
-    <script type="text/javascript" src="./js/authentication.js"></script>
+
+    <script>
+      const signUpForm = (e) => {
+        e.preventDefault();
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({
+          firstName: document.createAccount.firstName.value,
+          lastName: document.createAccount.lastName.value,
+          email: document.createAccount.email.value,
+          password: document.createAccount.password.value,
+        });
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+
+        fetch("http://localhost:9090/api/user/create", requestOptions)
+          .then((response) => response.json())
+          .then((result) => {
+            console.log(result);
+            if (result.status == 200) {
+              alert("Your Account created Successfuly");
+              window.open("login.html", "_self");
+            } else {
+              alert(result.error);
+              return false;
+            }
+          })
+          .catch((error) => console.log("error", error));
+      };
+    </script>
+
+    <!-- <script type="text/javascript" src="./js/authentication.js"></script> -->
   </body>
 </html>
