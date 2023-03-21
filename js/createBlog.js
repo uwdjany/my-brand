@@ -90,7 +90,6 @@ const createNewBlog = async (e) => {
     fetch("https://my-brand-backend-production-d231.up.railway.app/api/blog/add", requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        console.log(result)
         window.location.replace("/dashboard.html");
       })
       .catch((error) => console.log("error", error));

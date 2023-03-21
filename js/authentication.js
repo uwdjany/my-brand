@@ -1,4 +1,4 @@
-
+const idUser = new URLSearchParams(window.location.search).get("id");
 
 const signUp = (e) => {
   let fname = document.getElementById("fname").value;
@@ -48,9 +48,7 @@ function displayData() {
      <td>${user.password}</td>
      <td>${user.role}</td>
      <td>
-     <button  style="background:red ; color:white; padding:6px 9px; border-radius:8px;" type="button"  onclick="deleteUser('${
-       user.email
-     }');">Delete</button>
+     <button  style="background:red ; color:white; padding:6px 9px; border-radius:8px;" type="button"  onclick="deleteUser()">Delete</button>
      </td>
      </tr>
      `;
@@ -58,14 +56,31 @@ function displayData() {
   })
  
 }
-deleteUser = (email) => {
-  console.log(email);
-  if (confirm("Are you sure You want to delete this User")) {
-    const posts = JSON.parse(localStorage.getItem("formData")) || [];
-    const newPost = posts.filter((item) => item.email != email);
-    localStorage.setItem("formData", JSON.stringify(newPost));
-    displayData();
-  }
+deleteUser = () => {
+  // console.log(email);
+  // if (confirm("Are you sure You want to delete this User")) {
+  //   const posts = JSON.parse(localStorage.getItem("formData")) || [];
+  //   const newPost = posts.filter((item) => item.email != email);
+  //   localStorage.setItem("formData", JSON.stringify(newPost));
+  //   displayData();
+  // }
+
+  var myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer ${user.token}`);
+  myHeaders.append("Content-Type", "application/json");
+
+  var requestOptions = {
+      method: 'DELETE',
+      headers: myHeaders,
+      redirect: 'follow'
+  };
+  fetch(`https://my-brand-backend-production-d231.up.railway.app/api/user/delete/${idUser}`, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        alert("Are u sure you want to delete user??")
+          //window.location.replace("/dashboard.html");
+      })
+      .catch(error => console.log('error', error));
 };
 
 
