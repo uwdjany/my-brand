@@ -10,7 +10,7 @@ const renderPost = async () => {
     redirect: "follow",
   };
 
-  fetch("http://localhost:9090/api/blog/", requestOptions)
+  fetch("https://my-brand-backend-production-d231.up.railway.app/api/blog/", requestOptions)
     .then((response) => response.json())
     .then((result) => {
       let blog = "";

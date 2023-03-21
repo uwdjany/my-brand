@@ -11,6 +11,10 @@
 
 </head>
 
+
+
+
+
 <body>
     <nav>
         <div class="nav-container">
@@ -53,8 +57,8 @@
                         <div class="btn-name" id="user-account">
                             <span class="name" id="name-user">
                                 <script>
-                                    const userLoggedIn = localStorage.getItem("loggedIn");
-                                    document.write(userLoggedIn)
+                                  let userLogin = JSON.parse(localStorage.getItem('loginedUser'))
+                           document.write(userLogin.user.email)
 
                                 </script>
 

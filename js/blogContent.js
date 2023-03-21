@@ -4,23 +4,25 @@ const idOne = new URLSearchParams(window.location.search).get("id");
 //const likeBtn = document.querySelector("#likedBtn");
 
 const container = document.querySelector("main");
+
 const getOneById = async () => {
-  const url = await fetch(" http://localhost:3000/posts/" + idOne);
+  const url = await fetch(" https://my-brand-backend-production-d231.up.railway.app/api/blog/" + idOne);
   const res = await url.json();
+
   const temp = `
     <div class="img-content" id="container-active">
     <div class="text">
-      <h1>${res.title}</h1>
+      <h1>${res.data.title}</h1>
     </div>
     <div class="iconsDiv">
       <p>
-        <i class="fa-solid fa-calendar-days icon" ></i> ${res.date}
-        <button style=""><i class="fa-solid fa-comment icon" id="liked"></i> ${res.comment} +</button>
+        <i class="fa-solid fa-calendar-days icon" ></i> ${res.data.date}
+        <button style=""><i class="fa-solid fa-comment icon" id="liked"></i> ${res.data.comments.length} +</button>
        
         <button id="likedBtn" onclick="like()"><i class="fa-solid fa-thumbs-up icon"></i></button>
         
        
-        <span id="likeCount">${res.likes.length}</span>
+        <span id="likeCount">${res.data.likes.length}</span>
         
       </p>
     </div>
@@ -28,11 +30,11 @@ const getOneById = async () => {
 
   <div class="container">
     <div class="title">
-      <h5>Written by ${res.author}</h5>
+      <h5>Written by ${res.data.author}</h5>
     </div>
     <div class="content-blog">
       <p>
-     ${res.body}
+     ${res.data.content}
       </p>
     </div>
     `;

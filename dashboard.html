@@ -28,9 +28,15 @@
                     <div>
                         <span class="name" id="name-user">
                         <script>
-                            let user = localStorage.getItem("formData")
-                            let name =localStorage.getItem("loggedIn",user)
-                            document.write(name)
+                      
+
+                            let userLogin = JSON.parse(localStorage.getItem('loginedUser'))
+                           document.write(userLogin.user.email)
+                            
+                      
+                           
+
+                            
                         </script>
                         </span>
                     </div>

@@ -27,25 +27,36 @@ const signUp = (e) => {
 };
 let tbody = document.querySelector("tbody");
 function displayData() {
-  tbody.innerHTML = "";
-  const users = JSON.parse(localStorage.getItem("formData"));
-  users.forEach((user, i) => {
-    //console.log(user);
-    tbody.innerHTML += `<tr>
-   <td>${++i}</td>
-   <td>${user.fname}</td>
-   <td>${user.lname}</td>
-   <td>${user.email}</td>
-   <td>${user.pwd}</td>
-   <td>${user.role}</td>
-   <td>
-   <button  style="background:red ; color:white; padding:6px 9px; border-radius:8px;" type="button"  onclick="deleteUser('${
-     user.email
-   }');">Delete</button>
-   </td>
-   </tr>
-   `;
-  });
+
+  var requestOptions = {
+    method: "GET",
+    redirect: "follow",
+  };
+  //const users = JSON.parse(localStorage.getItem("formData"));]
+  fetch("https://my-brand-backend-production-d231.up.railway.app/api/user/all-user/", requestOptions)
+  .then((response) => response.json())
+  .then((result)=>{
+    tbody.innerHTML = "";
+  
+
+    result.data.forEach((user, i) => {
+      tbody.innerHTML += `<tr>
+     <td>${++i}</td>
+     <td>${user.firstName}</td>
+     <td>${user.lastName}</td>
+     <td>${user.email}</td>
+     <td>${user.password}</td>
+     <td>${user.role}</td>
+     <td>
+     <button  style="background:red ; color:white; padding:6px 9px; border-radius:8px;" type="button"  onclick="deleteUser('${
+       user.email
+     }');">Delete</button>
+     </td>
+     </tr>
+     `;
+    });
+  })
+ 
 }
 deleteUser = (email) => {
   console.log(email);
@@ -103,8 +114,9 @@ let btnNav = document.getElementById("btn-home")
 }
 
 function logout(){
-  let user = localStorage.getItem("formData")
-  if(!(localStorage.removeItem("loggedIn",user))){
+  //let user = localStorage.getItem("formData")
+let user = localStorage.getItem('loginedUser')
+  if(!(localStorage.removeItem("loginedUser",user))){
     btnNav.style.display="block"
     userAccount.style.display="none"
   }
