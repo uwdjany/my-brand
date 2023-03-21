@@ -16,7 +16,7 @@ const viewOne = async () => {
   if (id) {
     document.getElementById("img").style.display = "none";
   }
-  const view = await fetch("http://localhost:9090/api/blog/" + id);
+  const view = await fetch("https://my-brand-backend-production-d231.up.railway.app/api/blog/" + id);
   const post = await view.json();
   form.title.value = post.data.title;
   // form.author.value = post.data.author;
@@ -58,7 +58,7 @@ const createNewBlog = async (e) => {
     var myHeaders = new Headers();
     myHeaders.append("Authorization", `Bearer ${user.token}`);
     myHeaders.append("Content-Type", "application/json");
-    fetch("http://localhost:9090/api/blog/update/" + id, {
+    fetch("https://my-brand-backend-production-d231.up.railway.app/api/blog/update/" + id, {
       method: "PUT",
       headers: myHeaders,
       body: JSON.stringify(tempUpdate),
@@ -72,8 +72,11 @@ const createNewBlog = async (e) => {
     myHeaders.append("Authorization", `Bearer ${user.token}`);
     var formdata = new FormData();
     formdata.append("title", form.title.value);
+    formdata.append("author", form.author.value);
+    formdata.append("date",form.date.value)
     formdata.append("content", content);
     formdata.append("image", image.files[0]);
+   
 
     var requestOptions = {
       method: "POST",
@@ -84,9 +87,10 @@ const createNewBlog = async (e) => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:9090/api/blog/add", requestOptions)
+    fetch("https://my-brand-backend-production-d231.up.railway.app/api/blog/add", requestOptions)
       .then((response) => response.json())
       .then((result) => {
+        console.log(result)
         window.location.replace("/dashboard.html");
       })
       .catch((error) => console.log("error", error));

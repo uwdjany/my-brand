@@ -20,7 +20,7 @@ const renderPost = async () => {
         <h2>${posts.title}</h2>
         <p style= "color:#f5d20b;font-weight:bold;">Done:${posts.date}</p>
         <p><small>${posts.likes.length}</small> Likes</p>
-        <p><small>${posts.comments.lingth}</small> Comment</p>
+        <p><small>${posts.comments.length}</small> Comment</p>
         <p>${posts.content}</p>
         <a href="viewOneblog.html?id=${posts._id}">Read more</a>
         </div>`;
