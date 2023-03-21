@@ -76,7 +76,7 @@
           redirect: "follow",
         };
 
-        fetch("http://localhost:9090/api/user/login", requestOptions)
+        fetch("https://my-brand-backend-production-d231.up.railway.app/api/user/login", requestOptions)
           .then((response) => response.json())
           .then((result) => {
             console.log(result);

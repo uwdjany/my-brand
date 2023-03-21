@@ -17,7 +17,7 @@
         <a href="index.html">
           <i class="fa-sharp fa-solid fa-arrow-left icon"></i>
           <label>Back to home</label> </a
-        >+++
+        >
       </div>
       <div class="box">
         <div class="formsigup">
@@ -78,7 +78,7 @@
           redirect: "follow",
         };
 
-        fetch("http://localhost:9090/api/user/create", requestOptions)
+        fetch("https://my-brand-backend-production-d231.up.railway.app/api/user/create", requestOptions)
           .then((response) => response.json())
           .then((result) => {
             console.log(result);
